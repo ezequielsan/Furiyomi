@@ -61,10 +61,10 @@ fun ButtonStart(
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 private fun PreviewPrimaryButton() {
-    FuriyomiTheme {
+    /*FuriyomiTheme {
         ButtonStart (
             label = "Start",
             onClick = {}
         )
-    }
+    }*/
 }

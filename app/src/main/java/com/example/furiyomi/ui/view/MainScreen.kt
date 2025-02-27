@@ -17,8 +17,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.example.furiyomi.ThemeOption
 import com.example.furiyomi.ui.components.BottomNavigationBar
 import com.example.furiyomi.ui.components.DefaultTopAppBar
+import com.example.furiyomi.ui.components.TopAppBarMore
 import com.example.furiyomi.ui.components.TopBarDetails
 import com.example.furiyomi.ui.components.TopBarExplore
 import com.example.furiyomi.ui.theme.FuriyomiTheme
@@ -31,7 +33,10 @@ fun MainScreen(
     navController: NavHostController,
     viewModel: MangaViewModel,
     authViewModel: AuthViewModel,
-    context: Context
+    context: Context,
+    themeOption: ThemeOption,
+    onThemeChange: (ThemeOption) -> Unit
+
 ) {
     val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
     val showBottomBar = currentRoute in listOf("library", "history", "explore", "more")
@@ -55,8 +60,8 @@ fun MainScreen(
                     title = mangaTitle
                 )
                 "library" -> DefaultTopAppBar(currentRoute, navController, viewModel)
-                "history" -> DefaultTopAppBar(currentRoute, navController, viewModel)
-                "more" -> DefaultTopAppBar(currentRoute, navController, viewModel)
+//                "history" -> DefaultTopAppBar(currentRoute, navController, viewModel)
+                "more" -> TopAppBarMore(authViewModel, navController)
             }
         },
         bottomBar = {
@@ -74,7 +79,7 @@ fun MainScreen(
             composable("register") { RegisterScreen(authViewModel, navController) }
             composable("forgotPassword") { ForgotPasswordScreen(authViewModel, navController) }
             composable("library") { LibraryScreen(viewModel, authViewModel, navController) }
-            composable("history") { HistoryScreen(navController) }
+//            composable("history") { HistoryScreen(navController) }
             composable("explore") { ExploreScreen(
                 viewModel,
                 LocalContext.current,
@@ -83,7 +88,7 @@ fun MainScreen(
                 onDismissBottomSheet = { isBottomSheetVisible = false },
                 searchQuery = searchQuery)
             }
-            composable("more") { MoreScreen(authViewModel, navController) }
+            composable("more") { MoreScreen(authViewModel, navController, themeOption, onThemeChange) }
             composable("mangaDetails/{mangaId}") { backStackEntry ->
                 val mangaId = backStackEntry.arguments?.getString("mangaId")
                 MangaDetailsScreen(mangaId!!, navController, viewModel, authViewModel, context) { newTitle ->

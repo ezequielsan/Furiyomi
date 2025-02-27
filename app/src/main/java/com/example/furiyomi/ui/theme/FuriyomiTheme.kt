@@ -10,7 +10,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-private val darkColorScheme = AppColorScheme(
+val darkColorScheme = AppColorScheme(
     background = Black100,
     onBackground = White80,
     primary = Blue30,
@@ -19,7 +19,7 @@ private val darkColorScheme = AppColorScheme(
     onSecondary = White60
 )
 
-private val lightColorScheme = AppColorScheme(
+val lightColorScheme = AppColorScheme(
     background = White100,
     onBackground = Black70,
     primary = Blue100,
@@ -67,10 +67,11 @@ private val size = AppSize(
 
 @Composable
 fun FuriyomiTheme(
+    colorScheme: AppColorScheme,
     isDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if (isDarkTheme) darkColorScheme else lightColorScheme
+    // val colorScheme = if (isDarkTheme) darkColorScheme else lightColorScheme
     val rippleIndication = rememberRipple()
 
     CompositionLocalProvider(

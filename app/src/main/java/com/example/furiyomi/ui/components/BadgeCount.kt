@@ -37,7 +37,7 @@ fun BadgeCount(numberOfChapters: Int) {
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true, backgroundColor = 0x000000)
 @Composable
 private fun PreviewBadgeCount() {
-    FuriyomiTheme {
-        BadgeCount(165)
-    }
+//    /*FuriyomiTheme {
+//        BadgeCount(165)
+//    }*/
 }

@@ -111,7 +111,7 @@ fun TopBarDetails(scrollBehavior: TopAppBarScrollBehavior, hasNavIcon: Boolean, 
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true, backgroundColor = 0x000000)
 @Composable
 private fun PreviewTopBar() {
-    FuriyomiTheme {
+   /* FuriyomiTheme {
         // TopBarDetails()
-    }
+    }*/
 }

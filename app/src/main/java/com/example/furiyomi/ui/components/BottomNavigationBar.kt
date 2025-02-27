@@ -32,8 +32,8 @@ import com.example.furiyomi.ui.theme.FuriyomiTheme
 fun BottomNavigationBar(navHostController: NavHostController) {
 
     var selectedItem by remember { mutableIntStateOf(0) }
-    val items = listOf("Library", "History", "Explore", "More")
-    val itemsLabel = listOf("library", "history", "explore", "more")
+    val items = listOf("Library", "Explore", "More")
+    val itemsLabel = listOf("library", "explore", "more")
 
     val selectedIcons = listOf(Icons.Filled.CollectionsBookmark, Icons.Filled.History,
         Icons.Filled.Explore, Icons.Filled.MoreHoriz)
@@ -79,7 +79,7 @@ fun BottomNavigationBar(navHostController: NavHostController) {
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 private fun PreviewBottomNavigation() {
-    FuriyomiTheme {
+    /*FuriyomiTheme {
         // BottomNavigationBar()
-    }
+    }*/
 }
