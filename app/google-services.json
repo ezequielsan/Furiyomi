@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "223919408032",
+    "project_id": "furiyomi-edcdc",
+    "storage_bucket": "furiyomi-edcdc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223919408032:android:2e23670738a7ef61321ac5",
+        "android_client_info": {
+          "package_name": "com.example.furiyomi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223919408032-kn798p03mc5eq9bj90ugs0868aed63t8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.furiyomi",
+            "certificate_hash": "3d0c649fa681d84d30e07a56716e7f696d298d80"
+          }
+        },
+        {
+          "client_id": "223919408032-gm91189tnu3soplnoj837knmibtuo0ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANe_H607d3nDPSOL0qAuCqWg29Y3DNq6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223919408032-gm91189tnu3soplnoj837knmibtuo0ju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
